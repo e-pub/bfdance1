@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "thumb": "team1.png",
+        "name": "Daniel Jack",
+        "designation": "Creative Director",
+        "text": "Daniel Jack oversees all creative projects, bringing his keen eye for design and exceptional storytelling abilities to the table.",
+        "delay": 0
+    },
+    {
+        "id": 2,
+        "thumb": "team2.png",
+        "name": "Bob Pasley",
+        "designation": "Lead Designer",
+        "text": "Bob Pabsley is the creative force behind our stunning visual designs with a strong background in UI/UX and graphic design.",
+        "delay": 200
+    },
+    {
+        "id": 3,
+        "thumb": "team3.png",
+        "name": "Adrew Onana",
+        "designation": "Senior Developer",
+        "text": "Andrew Onana is our tech guru, responsible for turning our creative visions into functional digital solutions.",
+        "delay": 400
+    },
+    {
+        "id": 4,
+        "thumb": "team4.png",
+        "name": "Luka Modric",
+        "designation": "Project Manager",
+        "text": "James ensures that all our projects are delivered on time and within budget, making sure every project runs smoothly from start to finish.",
+        "delay": 0
+    },
+    {
+        "id": 5,
+        "thumb": "team5.png",
+        "name": "Toni Kross",
+        "designation": "Lead Visual",
+        "text": "Toni Kroos brings a fresh perspective to our design team. He helps our clients stand out in a crowded market.",
+        "delay": 200
+    }
+]

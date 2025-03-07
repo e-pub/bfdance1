@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "activeClass": "active",
+        "thumb": "fun-fact1.png",
+        "delay": "100",
+        "title": "Years Experience",
+        "end": "12"
+    },
+    {
+        "id": 2,
+        "activeClass": "",
+        "thumb": "fun-fact2.png",
+        "delay": "200",
+        "title": "Completed Projects",
+        "end": "25"
+    },
+    {
+        "id": 3,
+        "activeClass": "",
+        "thumb": "fun-fact3.png",
+        "delay": "400",
+        "title": "Award Winning",
+        "end": "110"
+    },
+    {
+        "id": 4,
+        "activeClass": "",
+        "thumb": "fun-fact4.png",
+        "delay": "600",
+        "title": "Satisfied Clients",
+        "end": "4"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "thumb": "project-1.jpg",
+        "projectName": "Dimension Dynamics",
+        "subTitle1": "We collaborated closely with our client to",
+        "subTitle2": "transform their vision into a reality.",
+        "info": "Brand Identity",
+        "date": "May 6th, 2024"
+    },
+    {
+        "id": 2,
+        "thumb": "project-2.jpg",
+        "projectName": "Amplify Influence",
+        "subTitle1": "One of our most successful projects in this area",
+        "subTitle2": "highlights our ability to design and develop.",
+        "info": "Marketing",
+        "date": "April 12th, 2024"
+    },
+    {
+        "id": 3,
+        "thumb": "project-3.jpg",
+        "projectName": "Intuitive Interactions",
+        "subTitle1": "An elegant project designed to facilitate seamless",
+        "subTitle2": "user experiences and intuitive interfaces.",
+        "info": "User Interface",
+        "date": "March 1st, 2024"
+    }
+]

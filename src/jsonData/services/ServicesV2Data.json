@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "activeClass": "active",
+        "thumb": "service1.png",
+        "title": "Building Strong, Supportive Teams",
+        "text": "To build strong, supportive teams within a design agency, clearly define project goals and roles, ensuring everyone  knows their responsibilities. Foster open communication and mutual respect to create a collaborative atmosphere.  Provide opportunities for professional growth to enhance skills and creativity."
+    },
+    {
+        "id": 2,
+        "activeClass": "",
+        "thumb": "service2.png",
+        "title": "Commitment to Excellence",
+        "text": "To uphold a commitment to excellence in a creative agency, consistently strive for the highest standards in every project and task. Foster meticulous attention to detail and drive continuous improvement through regular feedback and training. Recognize and celebrate achievements that showcase exceptional quality and performance."
+    },
+    {
+        "id": 3,
+        "activeClass": "",
+        "thumb": "service3.png",
+        "title": "Customer-Centric Focus",
+        "text": "To maintain a customer-centric focus in a creative agency, prioritize understanding and addressing the unique needs and preferences of each client. Continuously seek feedback to refine our services and tailor creative solutions that provide exceptional value. Cultivate a culture where client satisfaction is the ultimate  measure of success."
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "thumb": "blog1.png",
+        "title": "How to Create Impactful Visual Campaigns",
+        "date": "9 Jan 2024",
+        "delay": ""
+    },
+    {
+        "id": 2,
+        "thumb": "blog2.png",
+        "title": "Tips for Boosting Team Creativity",
+        "date": "10 Jan 2024",
+        "delay": "200"
+    },
+    {
+        "id": 3,
+        "thumb": "blog3.png",
+        "title": "How Visuals Impact Consumer Decisions",
+        "date": "11 Jan 2024",
+        "delay": ""
+    },
+    {
+        "id": 4,
+        "thumb": "blog4.png",
+        "title": "Why Consistency is Key in Branding",
+        "date": "12 Jan 2024",
+        "delay": "200"
+    },
+    {
+        "id": 5,
+        "thumb": "blog5.png",
+        "title": "The Impact of Color Psychology in Designing",
+        "date": "13 Jan 2024",
+        "delay": ""
+    },
+    {
+        "id": 6,
+        "thumb": "blog6.png",
+        "title": "Effective Website Design and Usability",
+        "date": "14 Jan 2024",
+        "delay": "200"
+    }
+]

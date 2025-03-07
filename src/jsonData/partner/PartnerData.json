@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "thumb": "client1.svg"
+    },
+    {
+        "id": 2,
+        "thumb": "client2.svg"
+    },
+    {
+        "id": 3,
+        "thumb": "client3.svg"
+    },
+    {
+        "id": 4,
+        "thumb": "client4.svg"
+    },
+    {
+        "id": 5,
+        "thumb": "client5.svg"
+    },
+    {
+        "id": 6,
+        "thumb": "client6.svg"
+    },
+    {
+        "id": 7,
+        "thumb": "client1.svg"
+    },
+    {
+        "id": 8,
+        "thumb": "client2.svg"
+    },
+    {
+        "id": 9,
+        "thumb": "client3.svg"
+    },
+    {
+        "id": 10,
+        "thumb": "client4.svg"
+    },
+    {
+        "id": 11,
+        "thumb": "client5.svg"
+    },
+    {
+        "id": 12,
+        "thumb": "client6.svg"
+    }
+]

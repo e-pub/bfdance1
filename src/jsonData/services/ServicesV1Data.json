@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "activeClass": "active",
+        "name": "Branding Identity",
+        "thumb": "service1.png",
+        "thumbFull1": "service-single1-1.jpg",
+        "thumbFull2": "service-single1-2.jpg",
+        "text": "Brand identity is the visual representation of a brand, including logos, colors, and messaging.",
+        "price": "3000",
+        "icon": "service-icon1.svg"
+    },
+    {
+        "id": 2,
+        "activeClass": "",
+        "name": "Interactive Design",
+        "thumb": "service2.png",
+        "thumbFull1": "service-single2-1.jpg",
+        "thumbFull2": "service-single2-2.jpg",
+        "text": "Brand identity is the visual representation of a brand, including logos, colors, and messaging.",
+        "price": "4000",
+        "icon": "service-icon2.svg"
+    },
+    {
+        "id": 3,
+        "activeClass": "",
+        "name": "Development",
+        "thumb": "service3.png",
+        "thumbFull1": "service-single3-1.jpg",
+        "thumbFull2": "service-single3-2.jpg",
+        "text": "Brand identity is the visual representation of a brand, including logos, colors, and messaging.",
+        "price": "3500",
+        "icon": "service-icon3.svg"
+    },
+    {
+        "id": 4,
+        "activeClass": "",
+        "name": "SEO/Marketing",
+        "thumb": "service4.png",
+        "thumbFull1": "service-single4-1.jpg",
+        "thumbFull2": "service-single4-2.jpg",
+        "text": "Brand identity is the visual representation of a brand, including logos, colors, and messaging.",
+        "price": "4500",
+        "icon": "service-icon4.svg"
+    }
+]

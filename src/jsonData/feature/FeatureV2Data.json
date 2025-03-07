@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "thumb": "project-1.jpg",
+        "name": "Dimension Dynamics",
+        "textFirst": "We collaborated closely with our client to",
+        "textLast": "transform their vision into a reality.",
+        "info": "Brand Identity",
+        "date": "May 6th, 2024",
+        "delay": "100"
+    },
+    {
+        "id": 2,
+        "thumb": "project-4.jpg",
+        "name": "Steinway Essentials",
+        "textFirst": "",
+        "textLast": "",
+        "info": "Web Design",
+        "date": "",
+        "delay": "100"
+    },
+    {
+        "id": 3,
+        "thumb": "project-5.jpg",
+        "name": "Sil’o Prints",
+        "textFirst": "",
+        "textLast": "",
+        "info": "Development",
+        "date": "",
+        "delay": "200"
+    },
+    {
+        "id": 4,
+        "thumb": "project-2.jpg",
+        "name": "Creative Nexus",
+        "textFirst": "We collaborated closely with our client to",
+        "textLast": "transform their vision into a reality.",
+        "info": "Marketing",
+        "date": "May 6th, 2024",
+        "delay": "100"
+    },
+    {
+        "id": 5,
+        "thumb": "project-6.jpg",
+        "name": "Innovative Horizon",
+        "textFirst": "",
+        "textLast": "",
+        "info": "Brand Identity",
+        "date": "",
+        "delay": "200"
+    },
+    {
+        "id": 6,
+        "thumb": "project-7.jpg",
+        "name": "Intuitive Interactions",
+        "textFirst": "",
+        "textLast": "",
+        "info": "Digital Marketing",
+        "date": "",
+        "delay": "100"
+    },
+    {
+        "id": 7,
+        "thumb": "project-3.jpg",
+        "name": "Creative Nexus",
+        "textFirst": "We collaborated closely with our client to",
+        "textLast": "transform their vision into a reality.",
+        "info": "User Interface",
+        "date": "May 6th, 2024",
+        "delay": "200"
+    }
+]

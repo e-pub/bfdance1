@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "thumb": "blog1.jpg",
+        "thumbFull": "blog1Full.jpg",
+        "title": "How to Create Impactful Visual Campaigns",
+        "title2": "The Science Behind Visuals: Why Images Matter More Than Words",
+        "author": "Lucas",
+        "comment": "Why consistency is key in Branding",
+        "date": "9 Jan 2024",
+        "delay": ""
+    },
+    {
+        "id": 2,
+        "thumb": "blog2.jpg",
+        "thumbFull": "blog2Full.jpg",
+        "title": "Tips for Boosting Team Creativity",
+        "title2": "Social Media Visuals: Best Practices for Maximizing Engagement",
+        "author": "Liam",
+        "comment": "How Visuals impact consumers decision",
+        "date": "10 Jan 2024",
+        "delay": "200"
+    },
+    {
+        "id": 3,
+        "thumb": "blog3.jpg",
+        "thumbFull": "blog3Full.jpg",
+        "title": "How Visuals Impact Consumer Decisions",
+        "title2": "The Future of Branding: Embracing Visual Content in Marketing Strategies",
+        "author": "Aiden",
+        "comment": "Effective website design and usability",
+        "date": "11 Jan 2024",
+        "delay": ""
+    },
+    {
+        "id": 4,
+        "thumb": "blog4.jpg",
+        "thumbFull": "blog4Full.jpg",
+        "title": "Why Consistency is Key in Branding",
+        "title2": "The Science Behind Visuals: Why Images Matter More Than Words",
+        "author": "Henry Lee",
+        "comment": "Tips for Boosting Team Creativity",
+        "date": "12 Jan 2024",
+        "delay": "200"
+    },
+    {
+        "id": 5,
+        "thumb": "blog5.jpg",
+        "thumbFull": "blog5Full.jpg",
+        "title": "The Impact of Color Psychology in Designing",
+        "title2": "The Science Behind Visuals: Why Images Matter More Than Words",
+        "author": "Lucas",
+        "comment": "Tips for Boosting Team Creativity",
+        "date": "13 Jan 2024",
+        "delay": ""
+    },
+    {
+        "id": 6,
+        "thumb": "blog6.jpg",
+        "thumbFull": "blog6Full.jpg",
+        "title": "Effective Website Design and Usability",
+        "title2": "The Science Behind Visuals: Why Images Matter More Than Words",
+        "author": "Liam",
+        "comment": "Tips for Boosting Team Creativity",
+        "date": "14 Jan 2024",
+        "delay": "200"
+    }
+]
