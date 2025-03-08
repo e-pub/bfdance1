@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:scss": "sass --no-source-map --style=compressed src/scss/main.scss src/css/style.css",
+    "watch:scss": "sass --watch --no-source-map --style=compressed src/scss/main.scss:src/css/style.css"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -23,15 +25,18 @@
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@types/aos": "^3.0.7",
+    "@types/node": "^22.13.9",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^9.19.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
+    "sass": "^1.85.1",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.22.0",
     "vite": "^6.0.5"
   }
 }

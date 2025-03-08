@@ -1,4 +1,18 @@
 {
+  "compilerOptions": {
+    "target": "ESNext",               // 최신 JavaScript 타겟 사용
+    "module": "ESNext",               // 최신 ESM 모듈 시스템 사용
+    "moduleResolution": "Node",       // Node.js 모듈을 올바르게 해석
+    "lib": ["ESNext", "DOM"],         // 최신 브라우저 API 및 ESNext 기능 사용
+    "strict": false,                  // 엄격 모드 비활성화
+    "noImplicitAny": false,           // 암시적 any 허용
+    "skipLibCheck": true,             // 라이브러리 타입 검사 건너뛰기
+    "strictNullChecks": false,        // null 체크 비활성화
+    "jsx": "react-jsx",               // JSX 오류 해결
+    "esModuleInterop": true,          // ESM & CommonJS 모듈 호환성 활성화
+    "allowSyntheticDefaultImports": true, // React 및 외부 모듈 기본 import 허용
+    "types": ["node"]                 // Node.js 관련 모듈을 찾을 수 있도록 설정
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

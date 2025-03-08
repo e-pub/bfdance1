@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* make sure to set some focus styles for accessibility */
+button, input, select, textarea{
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+button, input {
+  line-height: normal;
+}
+:focus {
+  outline: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+/* body {width: 100%; height: 100%; padding: 0; margin: 0; 
+  overflow-x: hidden; overflow-y: auto;
+  line-height: 1;
+}
+ */
+ol, ul, li {
+  list-style: none;
+}
+li {
+  display: list-item;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+tr {
+  display: table-row;
+}
+thead {
+  display: table-header-group;
+}
+tbody {
+  display: table-row-group;
+}
+tfoot {
+  display: table-footer-group;
+}
+col {
+  display: table-column;
+}
+colgroup {
+  display: table-column-group;
+}
+td,
+th {
+  display: table-cell;
+}
+caption {
+  display: table-caption;
+}
+th {
+  font-weight: bolder;
+  text-align: center;
+}
+caption {
+  text-align: center;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+a {color: inherit;
+  text-decoration: none;
+}
+a:focus,
+a:active,
+a:hover {
+  outline: 0;
+}
+h1, h2, h3, h4, h5, h6,
+b, strong {
+  font-weight: bolder;
+}
+img{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+
+/****************************************  공통 ****************************************/
+/****************************************  공통 ****************************************/
+/****** common ******/
+@media (min-width: 921px) {
+    .mob {display: none}
+}    
+@media (max-width: 920px) {
+    .pc {display: none}
+}    
+
+*, body {margin: 0; padding: 0; border-radius: 0; border: 0; position: initial;
+    -webkit-box-sizing: border-box; box-sizing:border-box;
+    color: var(--bk);
+    transition: background-color .3s linear, all .2s ease-in}
+html, body {width: 100% !important}
+body {height: 100%; display: inline-block;
+    letter-spacing: -0.2pt;
+    /* background-color: var(--prim); */ overflow: auto !important;
+    font-size: 17px !important}
+body, [class*="wrapper-"] {width: 100% !important; overflow-x: hidden !important}
+@media (max-width: 920px) {
+    body {width: 100%; min-width: 100%; max-width: 100%; display: inline-block}
+}//@media (max-width: 920px) /*** 250110 ***/
+ul, ol, li {list-style: none}
+a {text-decoration: none; background: none; font-weight: bold}
+a:hover {text-decoration: underline}
+
+/****** mix-in ******/
+@mixin pattern-line {background: repeating-linear-gradient(45deg, var(--gray-e), var(--gray-e) 4px, var(--gray-f8) 0, var(--gray-f8) 8px)}//쓰인곳: BNF2002-00M - NPL페이지에 쓰인 두꺼운 화살표에 응용
+@mixin bg-gra-prim {background: linear-gradient(45deg, #ffc8e6 20%, #E4007F 100%) !important}
+@mixin bg-gra-second {background: linear-gradient(45deg, #327daf 20%, #176199 100%) !important}
+@mixin txt-shadow-wh {text-shadow: 0 0 10px var(--wh)}
+@mixin txt-shadow-bk {text-shadow: 0 0 10px var(--bk)}
+@mixin txt-shadow-blu {text-shadow: 0 0 10px var(--blu-d)}
+@mixin radius-0 {border-radius: 0; -webkit-border-radius: 0; -ms-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0}
+@mixin radius-5 {border-radius: 5px; -webkit-border-radius: 5px; -ms-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px}
+@mixin radius-10-top {border-radius: 10px 10px 0 0; -webkit-border-radius: 10px 10px 0 0; -ms-border-radius: 10px 10px 0 0; -moz-border-radius: 10px 10px 0 0; -o-border-radius: 10px 10px 0 0}
+@mixin radius-10-bottom {border-radius: 0 0 10px 10px; -webkit-border-radius: 0 0 10px 10px; -ms-border-radius: 0 0 10px 10px; -moz-border-radius: 0 0 10px 10px; -o-border-radius: 0 0 5px 5px}
+@mixin radius-10-left {border-radius: 10px 0 0 10px; -webkit-border-radius: 10px 0 0 10px; -ms-border-radius: 10px 0 0 10px; -moz-border-radius: 10px 0 0 10px; -o-border-radius: 10px 0 0 10px}
+@mixin radius-10-right {border-radius: 0 10px 10px 0; -webkit-border-radius: 0 10px 10px 0; -ms-border-radius: 0 10px 10px 0; -moz-border-radius: 0 10px 10px 0; -o-border-radius: 0 10px 10px 0}
+@mixin radius-10 {border-radius: 10px; -webkit-border-radius: 10px; -ms-border-radius: 10px; -moz-border-radius: 10px; -o-border-radius: 10px}
+@mixin radius-20 {border-radius: 20px; -webkit-border-radius: 20px; -ms-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px}
+@mixin radius-30 {border-radius: 30px; -webkit-border-radius: 30px; -ms-border-radius: 30px; -moz-border-radius: 30px; -o-border-radius: 30px}
+@mixin radius-40 {border-radius: 40px; -webkit-border-radius: 40px; -ms-border-radius: 40px; -moz-border-radius: 40px; -o-border-radius: 40px}
+@mixin radius-50 {border-radius: 50px; -webkit-border-radius: 50px; -ms-border-radius: 50px; -moz-border-radius: 50px; -o-border-radius: 50px}
+@mixin radius-80 {border-radius: 80px; -webkit-border-radius: 80px; -ms-border-radius: 80px; -moz-border-radius: 80px; -o-border-radius: 80px}
+@mixin radius-100 {border-radius: 100px; -webkit-border-radius: 100px; -ms-border-radius: 100px; -moz-border-radius: 100px; -o-border-radius: 100px}
+@mixin radius-cir {border-radius: 50%; -webkit-border-radius: 50%; -ms-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%}
+@mixin radius-drop {border-radius: 10px 50% 50% 50%; -webkit-border-radius: 10px 50% 50% 50%; -ms-border-radius: 10px 50% 50% 50%; -moz-border-radius: 10px 50% 50% 50%; -o-border-radius: 10px 50% 50% 50%}
+@mixin radius-leaf-lt-rb {border-radius: 10px 100px 10px 100px; -webkit-border-radius: 10px 100px 10px 100px; -ms-border-radius: 10px 100px 10px 100px; -moz-border-radius: 10px 100px 10px 100px; -o-border-radius: 10px 50% 10px 50%}
+@mixin radius-leaf-rt-lb {border-radius: 100px 10px 100px 10px; -webkit-border-radius: 100px 10px 100px 10px; -ms-border-radius: 100px 10px 100px 10px; -moz-border-radius: 100px 10px 100px 10px; -o-border-radius: 50% 10px 50% 10px}
+/* */
+@mixin font-pre {font-family: 'pretendard', 'DakiB', 'Roboto', sans-serif !important; font-weight: bold}
+@mixin posi-cen-h {top: 0; left: 50% !important; transform: translate(-50%, 0) !important}
+@mixin radius-20noTop {border-radius: 0 0 20px 20px; -webkit-border-radius: 0 0 20px 20px; -ms-border-radius: 0 0 20px 20px; -moz-border-radius: 0 0 20px 20px; -o-border-radius: 0 0 20px 20px}
+@mixin radius-20noBottom {border-radius: 20px 20px 0 0; -webkit-border-radius: 20px 20px 0 0; -ms-border-radius: 20px 20px 0 0; -moz-border-radius: 20px 20px 0 0; -o-border-radius: 20px 20px 0 0}
+/* */
+@mixin mirror {transform: rotate(180deg);
+    -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1)}
+@mixin flex {display: flex; display: -webkit-box; display: -ms-flexbox}
+@mixin flex-start {display: flex; display: -webkit-box; display: -ms-flexbox;
+    -webkit-box-align: start; -moz-align-items: start; -ms-flex-align: start; align-items: start}
+@mixin flex-cen {display: flex; display: -webkit-box; display: -ms-flexbox;
+    -webkit-box-align: center; -moz-align-items: center; -ms-flex-align: center; align-items: center;
+    -webkit-box-pack: center; -moz-box-justify-content: center; -ms-flex-pack: center; justify-content: center}
+@mixin fx-txtCen {-webkit-box-pack: center; -moz-box-justify-content: center; -ms-flex-pack: center; justify-content: center}
+@mixin flex-bet {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: flex;
+    -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between}
+@mixin flex-ver {display: flex; display: -webkit-box; display: -ms-flexbox;
+    -webkit-box-align: center; -moz-align-items: center; -ms-flex-align: center; align-items: center}//세로 중앙
+@mixin fx-ver {-webkit-box-orient: vertical; -moz-flex-direction: column; -ms-flex-direction: column; flex-direction: column}
+/* */
+@mixin fit-brBox {-webkit-box-sizing: border-box !important; -moz-box-sizing:border-box !important;; box-sizing:border-box !important}
+@mixin flex-column {-webkit-box-orient: vertical; -moz-flex-direction: column; -ms-flex-direction: column; flex-direction: column}
+
+
+/**************************************** 레이아웃 ****************************************/
+/**************************************** 레이아웃 ****************************************/
+/*** flex ***/
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex}
+.fx-h {
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row}
+.fx-v {
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;}
+.fx-start {
+    -webkit-box-pack: start;
+    -moz-box-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start}
+.fx-bet {
+    -webkit-box-pack: justify;
+    -moz-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between}
+.fx-end {
+    -webkit-box-pack: end;
+    -moz-box-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end}
+.fx-cen {
+    -webkit-box-pack: center;
+    -moz-box-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center}
+.fx-unit, .inline {display: inline-block}
+.fx-ver {-webkit-box-align: center; -moz-align-items: center; -ms-flex-align: center; align-items: center}
+
+/*** 테이블 셀 ***/
+.table1, .tb1-row {width: 100%}
+.table1 {display: table}
+.tb1-row {display: table-row}
+.tb1-cell {display: table-cell}
+.cell-top {vertical-align: top}
+.cell-mid {vertical-align: middle}
+.cell-bottom {vertical-align: bottom}
+
+/**************************************** 컬러 ****************************************/
+/**************************************** 컬러 ****************************************/
+:root {
+    --prim: rgb(10,48,112);
+    --prim-l: rgb(68,75,140);
+    --second: #F4C476;
+    --yel: #FFB34E;
+    --green: #26C2BB;
+    --prim-l: #FDEBF2;
+    --second-l: #d7e9fa;
+    --blu-d: #0B3F6E;
+    --blu-f5: #F5F7FA;//테이블 등에 쓰임
+    --bk: #212121;
+    --wh: #fff;
+    --wh-alpha-5: rgba(255,255,255,0.5);
+    --bk-alpha-5: rgba(0,0,0,0.5);
+    --red-alpha-8: rgba(253,235,242,0.8);
+    --red-alpha-9: rgba(253,235,242,0.9);
+    --blu-alpha-9: rgba(229,245,255,0.9);
+    --gray-f8: #f8f8f8;
+    
+    --gray-e: #eee;
+    --gray-d: #ddd;
+    --gray-c: #ccc;
+    --gray-9: #999;
+    --gray-5: #555;
+    --gray-3: #555;
+}//:root
+
+
+/**************************************** forms ****************************************/
+/**************************************** forms ****************************************/
+input[type="text"] {width: 100%; height: 40px; line-height: 40px;
+  border: 1px solid var(--gray-d)}
+
+
+
+/**************************************** wrap ****************************************/
+/**************************************** wrap ****************************************/
+
+
+
+
+
+/**************************************** temp ****************************************/
+/**************************************** temp ****************************************/
+.bg {background: red !important}
+.bgb {background: blue !important}
+.bgy {background: yellow !important}
+.bgg {background: green !important}
+.bgp {background: purple !important}
+.bgo {background: orange !important}
+.br {border: 2px solid red !important}
+.brb {border: 2px solid blue !important}
+.bro {border: 2px solid orange !important}
+.brp {border: 2px solid purple !important}
+.brg {border: 2px solid green !important}
