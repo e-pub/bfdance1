@@ -1,0 +1,5 @@
+@use "common";
+@use "main";
+@use "mixins" as *; // ✅ `as *` 추가
+@use "schedule_calendar";
+@use "variables";

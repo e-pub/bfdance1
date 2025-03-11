@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 //////////////////* 스케줄표 *//////////////////
   .schedule-container {display: grid; opacity: 0;
     grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 40px;
@@ -27,7 +29,7 @@
   .modal {position: fixed; top: 50%; left: 50%; z-index: 10000; overflow: visible;
     width: 360px; height: 640px;
     background: transparent;
-    /* @include flex-cen; */
+    @include flex-cen;
     flex-direction: column;    
     transform: translate(-50%, -50%)}
   /* 닫기 버튼 */
@@ -37,7 +39,7 @@
     background-color: var(--bk);
     color: var(--wh);
     font-size: 16px;   
-    @include radius-50; /* @include flex-cen; */
+    @include radius-50; @include flex-cen;
     &:hover {background-color: var(--gray-5)}
   }
   /* 유튜브 영상 */

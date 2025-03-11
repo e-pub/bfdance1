@@ -1,0 +1,88 @@
+@charset "utf-8"; 
+
+@font-face {
+  font-family: 'pretendard';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/Pretendard-Regular.otf) format('otf'),
+       local(※), url(../fonts/Pretendard-Regular.otf) format('otf');
+}
+@font-face {
+  font-family: 'pretendard';
+  font-style: normal;
+  font-weight: semibold;
+  src: url(../fonts/Pretendard-SemiBold.otf) format('otf'),
+       local(※), url(../fonts/Pretendard-SemiBold.otf) format('otf');
+}
+@font-face {
+  font-family: 'pretendard';
+  font-style: normal;
+  font-weight: bold;
+  src: url(../fonts/Pretendard-SemiBold.otf) format('otf'),
+       local(※), url(../fonts/Pretendard-SemiBold.otf) format('otf');
+}
+
+
+/*** 대체폰트 ***/
+@font-face {
+    font-family: "cairo";
+    font-weight: normal;
+    font-style: normal;
+    src: local("AnyTestFont"), url("../fonts/Cairo-M.ttf") format("ttf"),
+         url('../fonts/Cairo-M.ttf') format('ttf'),
+}
+
+@font-face {
+    font-family: "cairo";
+    font-weight: bold;
+    font-style: normal;
+    src: local("AnyTestFont"), url("../fonts/Cairo-M.ttf") format("ttf"),
+         url('../fonts/Cairo-SemiB.ttf') format('ttf'),
+}
+
+/*** 대체폰트: 긴글꼴 (헤드라인) ***/
+
+@font-face {
+    font-family: "teko";
+    font-weight: normal;
+    font-style: normal;
+    src: local("AnyTestFont"), url("../fonts/Teko-Reg.ttf") format("ttf"),
+         url('../fonts/Teko-Reg.ttf') format('ttf'),
+}
+@font-face {
+    font-family: "teko";
+    font-weight: bold;
+    font-style: bold;
+    src: local("AnyTestFont"), url("../fonts/Teko-SemiB.ttf") format("ttf"),
+         url('../fonts/Teko-SemiB.ttf') format('ttf'),
+}
+
+/*** ***/
+@font-face {
+    font-family: "Kanit";
+    font-weight: normal;
+    font-style: normal;
+    src: local("AnyTestFont"), url("../fonts/Kanit-Regular.ttf") format("ttf"),
+         url('../fonts/Kanit-Regular.ttf') format('ttf'),
+}
+@font-face {
+    font-family: "Kanit";
+    font-weight: bold;
+    font-style: bold;
+    src: local("AnyTestFont"), url("../fonts/Kanit-Bold.ttf") format("ttf"),
+         url('../fonts/Kanit-Bold.ttf') format('ttf'),
+}
+
+
+
+body {font-family: 'pretendard', Arial, Helvetica, sans-serif; font-weight: normal; color: var(--bk)}
+
+
+
+
+
+
+
+
+
+
