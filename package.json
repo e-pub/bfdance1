@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:scss": "sass --source-map --style=compressed src/scss:src/css",
-    "watch:scss": "sass --watch --source-map --style=compressed src/scss:src/css"
+    "build:scss": "sass --no-source-map --style=compressed src/scss:src/scss",
+    "watch:scss": "sass --watch --no-source-map --style=compressed src/scss:src/scss"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -31,6 +31,7 @@
     "@types/react-dom": "^19.0.3",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.57.1",
     "eslint-plugin-react-hooks": "^5.1.0",

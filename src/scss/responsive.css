@@ -115,7 +115,7 @@
         gap: 24px;
     }
 
-    .about-sec .section-header .tit-sec {
+    .about-sec .section-header .section-title {
         font-weight: 400;
     }
 
@@ -449,7 +449,7 @@
         padding-right: 20px;
     }
 
-    .tit-sec.tit-sec2 {
+    .section-title.section-title2 {
         font-size: 52px;
         line-height: 52px;
         padding: 7px;

@@ -1,7 +1,17 @@
 {
   "editor.tabSize": 2,
-  "json.schemaDownload.enable": false,
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 300
+  "files.autoSaveDelay": 300,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "/src/scss"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false, // ✅ .map 파일 생성 방지
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    "**/vendor/**"
+  ]
 }
-//scss 실시간 저장 활성화 포함

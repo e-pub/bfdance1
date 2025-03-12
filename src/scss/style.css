@@ -58,9 +58,10 @@ ol {
 }
 
 .custom-container {
-    max-width: 1960px;
+    max-width: 1440px;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
@@ -198,7 +199,7 @@ a {
     height: 10px;
 }
 
-.section-header .tit-sec {
+.section-header .section-title {
     font-size: 48px;
     font-weight: 400;
     color: var(--primary);
@@ -207,7 +208,7 @@ a {
     margin: 0;
 }
 
-.tit-sec.tit-sec2 {
+.section-title.section-title2 {
     background: linear-gradient(90deg, rgb(255, 255, 255) 16%, rgb(77, 77, 77) 140%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -220,7 +221,7 @@ a {
     margin: -7px;
 }
 
-.tit-sec.tit-sec2 span {
+.section-title.section-title2 span {
     font-style: normal;
     font-family: var(--font_urbanist);
     /* font-family: var(--font_arapey); */
@@ -773,6 +774,7 @@ a {
 /* ===== # Hero ===== */
 .hero-sec .hero-inner {
     height: calc(100vh + 36px);
+    padding: 0 72px 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -832,6 +834,7 @@ a {
 .hero-sec .hero-top .hero-top-desc {
     display: flex;
     flex-direction: column;
+    gap: 25px;
 }
 
 .hero-sec .hero-top p {
@@ -2092,7 +2095,7 @@ a {
     margin-bottom: 148px;
 }
 
-.faq-sec .section-header .tit-sec {
+.faq-sec .section-header .section-title {
     line-height: 96px;
     margin-bottom: 20px;
 }

@@ -1,0 +1,25 @@
+:root {
+  --prim: rgb(10,48,112);
+  --prim-l: rgb(68,75,140);
+  --second: #F4C476;
+  --yel: #FFB34E;
+  --green: #26C2BB;
+  --prim-l: #FDEBF2;
+  --second-l: #d7e9fa;
+  --blu-d: #0B3F6E;
+  --blu-f5: #F5F7FA;
+  --bk: #212121;
+  --wh: #fff;
+  --wh-alpha-5: rgba(255,255,255,0.5);
+  --bk-alpha-5: rgba(0,0,0,0.5);
+  --red-alpha-8: rgba(253,235,242,0.8);
+  --red-alpha-9: rgba(253,235,242,0.9);
+  --blu-alpha-9: rgba(229,245,255,0.9);
+  --gray-f8: #f8f8f8;
+  --gray-e: #eee;
+  --gray-d: #ddd;
+  --gray-c: #ccc;
+  --gray-9: #999;
+  --gray-5: #555;
+  --gray-3: #555;
+}/*# sourceMappingURL=variables.css.map */
