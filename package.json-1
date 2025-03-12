@@ -1,0 +1,44 @@
+{
+  "name": "bfdance",
+  "private": true,
+  "version": "1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "build:scss": "sass --no-source-map --style=compressed src/scss:src/scss",
+    "watch:scss": "sass --watch --no-source-map --style=compressed src/scss:src/scss"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "gsap": "^3.12.5",
+    "line-awesome": "^1.3.0",
+    "react": "^18.2.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.1.1",
+    "react-simple-scroll-up": "^0.2.3",
+    "react-toastify": "^11.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/aos": "^3.0.7",
+    "@types/node": "^22.13.9",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "globals": "^15.14.0",
+    "sass": "^1.85.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

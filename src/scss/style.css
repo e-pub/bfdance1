@@ -199,14 +199,7 @@ a {
     height: 10px;
 }
 
-.section-header .section-title {
-    font-size: 48px;
-    font-weight: 400;
-    color: var(--primary);
-    line-height: 60px;
-    letter-spacing: -2px;
-    margin: 0;
-}
+
 
 .section-title.section-title2 {
     background: linear-gradient(90deg, rgb(255, 255, 255) 16%, rgb(77, 77, 77) 140%);
