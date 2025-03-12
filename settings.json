@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 2,
+  "json.schemaDownload.enable": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 300
+}
+//scss 실시간 저장 활성화 포함

@@ -198,7 +198,7 @@ a {
     height: 10px;
 }
 
-.section-header .section-title {
+.section-header .tit-sec {
     font-size: 48px;
     font-weight: 400;
     color: var(--primary);
@@ -207,7 +207,7 @@ a {
     margin: 0;
 }
 
-.section-title.section-title2 {
+.tit-sec.tit-sec2 {
     background: linear-gradient(90deg, rgb(255, 255, 255) 16%, rgb(77, 77, 77) 140%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -220,7 +220,7 @@ a {
     margin: -7px;
 }
 
-.section-title.section-title2 span {
+.tit-sec.tit-sec2 span {
     font-style: normal;
     font-family: var(--font_urbanist);
     /* font-family: var(--font_arapey); */
@@ -2092,7 +2092,7 @@ a {
     margin-bottom: 148px;
 }
 
-.faq-sec .section-header .section-title {
+.faq-sec .section-header .tit-sec {
     line-height: 96px;
     margin-bottom: 20px;
 }

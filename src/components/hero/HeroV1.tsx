@@ -8,88 +8,55 @@ const HeroV1 = () => {
     const overlayRef = useRef<HTMLDivElement | null>(null);
 
     // ✅ `localStorage`에서 이전 음소거 상태 가져오기
-    const [isMuted, setIsMuted] = useState(() => {
-        return localStorage.getItem("videoMuted") === "false";
-    });
+    const [isMuted, setIsMuted] = useState(() => localStorage.getItem("videoMuted") !== "true");
 
     useEffect(() => {
-        if (videoRef.current) {
-            /* videoRef.current.muted = isMuted; */
-            videoRef.current.loop = true;
+        const video = videoRef.current;
+        video && (video.loop = true);
 
-            // ✅ 브라우저 리로드 시 무조건 영상 재생 (mute 설정과 상관없이)
-            let attempts = 0;
-            const tryPlay = async () => {
-                try {
-                    await videoRef.current?.play();
-                    console.log("🎬 Video autoplay successful");
-                } catch (error) {
-                    attempts++;
-                    if (attempts < 10) {
-                        console.warn(`🚨 Video autoplay failed (${attempts}), retrying...`);
-                        setTimeout(tryPlay, 100);
-                    } else {
-                        console.error("🚨 Video autoplay failed after 10 attempts:", error);
-                    }
-                }
-            };
+        // ✅ 브라우저 리로드 시 무조건 영상 재생
+        let attempts = 0;
+        const tryPlay = () => 
+            video?.play()
+                .then(() => console.log("🎬 Video autoplay successful"))
+                .catch(() => (attempts++ < 10) && setTimeout(tryPlay, 100));
 
-            tryPlay();
+        tryPlay();
 
-            // ✅ 탭 전환 시 다시 재생되도록 설정
-            const handleVisibilityChange = () => {
-                if (!document.hidden && videoRef.current?.paused) {
-                    tryPlay();
-                }
-            };
+        // ✅ 탭 전환 시 다시 재생되도록 설정
+        const handleVisibilityChange = () => !document.hidden && video?.paused && tryPlay();
+        document.addEventListener("visibilitychange", handleVisibilityChange);
 
-            document.addEventListener("visibilitychange", handleVisibilityChange);
-            return () => {
-                document.removeEventListener("visibilitychange", handleVisibilityChange);
-            };
-        }
+        return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
     }, [isMuted]);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const maxScroll = 500;
-            const overlayOpacity = Math.min(scrollTop / maxScroll, 0.8); // ✅ 최대 0.8까지 어두워짐
+            const overlayOpacity = Math.min(scrollTop / maxScroll, 0.8);
 
-            if (overlayRef.current) {
-                overlayRef.current.style.backgroundColor = `rgba(0, 0, 0, ${overlayOpacity})`;
-            }
+            overlayRef.current && (overlayRef.current.style.backgroundColor = `rgba(0, 0, 0, ${overlayOpacity})`);
 
-            // ✅ 스크롤 시 소리가 서서히 사라지도록 설정 (1초간 fade-out 후 완전 제거)
-            if (videoRef.current && !isMuted) {
-                if (scrollTop > maxScroll) {
-                    const fadeOut = setInterval(() => {
-                        if (videoRef.current?.volume && videoRef.current.volume > 0) {
-                            videoRef.current.volume = Math.max(videoRef.current.volume - 0.1, 0);
-                        } else {
-                            clearInterval(fadeOut);
-                        }
-                    }, 100);
-                } else {
-                    if (videoRef.current?.volume !== undefined) {
-                        videoRef.current.volume = 1;
-                    }
-                }
-            }
+            // ✅ 스크롤 시 서서히 소리 감소
+            const video = videoRef.current;
+            video && !isMuted && (scrollTop > maxScroll 
+                ? setInterval(() => video.volume && (video.volume = Math.max(video.volume - 0.1, 0)), 100) 
+                : (video.volume = 1)
+            );
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, [isMuted]);
 
-    // ✅ 음소거 토글 함수 (Mute 상태 변경 및 localStorage에 저장)
+    // ✅ 음소거 토글 (Mute 상태 변경 및 localStorage 저장)
     const toggleMute = () => {
-        if (videoRef.current) {
-            const newMuteState = !videoRef.current.muted;
-            videoRef.current.muted = newMuteState;
-            setIsMuted(newMuteState);
-            localStorage.setItem("videoMuted", String(newMuteState));
-        }
+        const video = videoRef.current;
+        const newMuteState = video ? !video.muted : isMuted;
+        video && (video.muted = newMuteState);
+        setIsMuted(newMuteState);
+        localStorage.setItem("videoMuted", String(newMuteState));
     };
 
     return (
@@ -103,7 +70,7 @@ const HeroV1 = () => {
                     autoPlay 
                     loop 
                     playsInline 
-                    muted={isMuted} // ✅ Mute 상태 유지
+                    muted={isMuted} 
                     onError={() => console.error("🚨 비디오를 불러올 수 없습니다. 경로를 확인하세요!")}
                 />
                 {/* ✅ 스크롤 시 어두워지는 Overlay */}
