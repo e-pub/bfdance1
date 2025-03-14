@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* */
+/* */
+/* */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -322,26 +325,39 @@ input[type=text] {
   white-space: normal !important;
 }
 
-.sec-head {
-  margin-bottom: 50px;
+.tit_sec {
+  width: 40%;
+  font-size: 35px;
 }
-.sec-head [class*=col-] {
-  vertical-align: top;
-  display: inline-block;
-}
-.sec-head .col-left {
-  width: 30%;
-}
-.sec-head .col-left .tit_sec {
-  font-size: 40px;
-}
-.sec-head .col-right {
-  width: 70%;
-}
-.sec-head .col-right .txt_sec {
-  font-size: 30px;
+
+.txt_sec {
+  padding-left: 50px;
+  line-height: 34px;
+  font-size: 20px;
   font-weight: 400;
   white-space: normal !important;
+}
+.txt_sec.big {
+  font-size: 26px !important;
+  margin-bottom: 20px;
+}
+
+/**************************************** TABLE ****************************************/
+/**************************************** TABLE ****************************************/
+.tb-reg {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.tb-reg th, .tb-reg td {
+  font-size: 15px;
+  color: var(--gray-9);
+}
+.tb-reg th p, .tb-reg td p {
+  font-size: 20px;
+  color: var(--wh);
 }
 
 /**************************************** temp ****************************************/

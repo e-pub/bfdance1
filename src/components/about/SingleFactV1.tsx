@@ -18,7 +18,7 @@ const SingleFactV1 = ({ fact }: { fact: DataType }) => {
             <div data-aos="fade-up" data-aos-delay={delay} className={`funfact-box ${activeClass}`}>
                 <img src={`/assets/images/${thumb}`} alt="funfact" className="overlay" />
                 <div className="funfact-header">
-                    <span className="title">{title}</span>
+                    <span className="tit">{title}</span>
                 </div>
                 <div className="funfact-footer">
                     <span className="number">{end}<span>+</span></span>

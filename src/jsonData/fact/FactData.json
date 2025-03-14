@@ -4,31 +4,31 @@
         "activeClass": "active",
         "thumb": "fun-fact1.png",
         "delay": "100",
-        "title": "Years Experience",
-        "end": "12"
+        "title": "다양한 수업방식",
+        "end": "평균 2~4명/Class"
     },
     {
         "id": 2,
         "activeClass": "",
-        "thumb": "fun-fact2.png",
+        "thumb": "fun-fact1.png",
         "delay": "200",
-        "title": "Completed Projects",
-        "end": "25"
+        "title": "뛰어난 강사진",
+        "end": "5명"
     },
     {
         "id": 3,
         "activeClass": "",
-        "thumb": "fun-fact3.png",
+        "thumb": "fun-fact1.png",
         "delay": "400",
-        "title": "Award Winning",
-        "end": "110"
+        "title": "출장/개인레슨",
+        "end": "문의해주세요"
     },
     {
         "id": 4,
         "activeClass": "",
-        "thumb": "fun-fact4.png",
+        "thumb": "fun-fact1.png",
         "delay": "600",
-        "title": "Satisfied Clients",
-        "end": "4"
+        "title": "연습실이용/대관",
+        "end": "문의주세요"
     }
 ]

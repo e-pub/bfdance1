@@ -35,9 +35,14 @@
 @mixin flex-cen {display: flex; display: -webkit-box; display: -ms-flexbox;
     -webkit-box-align: center; -moz-align-items: center; -ms-flex-align: center; align-items: center;
     -webkit-box-pack: center; -moz-box-justify-content: center; -ms-flex-pack: center; justify-content: center}
+@mixin flex-end {display: flex; display: -webkit-box; display: -ms-flexbox;
+    -webkit-box-align: end; -moz-align-items: end; -ms-flex-align: end; align-items: end;
+    -webkit-box-pack: end; -moz-box-justify-content: end; -ms-flex-pack: end; justify-content: end}
 @mixin fx-txtCen {-webkit-box-pack: center; -moz-box-justify-content: center; -ms-flex-pack: center; justify-content: center}
 @mixin flex-bet {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: flex;
     -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between}
+@mixin flex-none {-webkit-flex: none; /* Safari 구형 대응 */ -ms-flex: none; /* IE 대응 */ flex: none; 
+    flex-grow: 0; flex-shrink: 0; flex-basis: auto}
 @mixin flex-ver {display: flex; display: -webkit-box; display: -ms-flexbox;
     -webkit-box-align: center; -moz-align-items: center; -ms-flex-align: center; align-items: center}//세로 중앙
 @mixin fx-ver {-webkit-box-orient: vertical; -moz-flex-direction: column; -ms-flex-direction: column; flex-direction: column}

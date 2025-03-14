@@ -30,20 +30,20 @@ const AboutV2 = () => {
                         <div data-aos="fade-up" className="funfact-box active">
                             <img src={funFact} alt="funfact" className="overlay" />
                             <div className="funfact-header">
-                                <span className="title">Years Experience</span>
+                                <h4 className="title">내부내용 변경 안되는 부분</h4>
                             </div>
                             <div className="funfact-footer">
-                                <span className="number">12<span>+</span></span>
+                                <span className="number">내부내용 변경 안되는 부분</span>
                                 <img src={angleIcon} alt="icon" />
                             </div>
                         </div>
                         <div data-aos="fade-up" data-aos-delay={200} className="funfact-box">
                             <img src={funFact2} alt="funfact" className="overlay" />
                             <div className="funfact-header">
-                                <span className="title">Completed Projects</span>
+                                <span className="title">1111</span>
                             </div>
                             <div className="funfact-footer">
-                                <span className="number">25K<span>+</span></span>
+                                <span className="number">11111<span>+</span></span>
                                 <img src={angleIcon} alt="icon" />
                             </div>
                         </div>
