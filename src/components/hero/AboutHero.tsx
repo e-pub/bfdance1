@@ -18,14 +18,14 @@ const HeroV2 = ({ title }: DataType) => {
                                 <p>{`"At AIXOR, we hold that creativity sparks innovation. As a full-spectrum creative firm, we excel in converting ambitious ideas into engaging results."`}</p>
                             </div>
                             <div className="author-info">
-                                <h4>Ahshan M</h4>
-                                <span>Chief Executive Officer</span>
+                                <h4>코레오그라피, 케이팝, 안무가가</h4>
+                                <span>원장, 이창민민</span>
                             </div>
                         </div>
                         <div className="hero-bottom">
                             <div className="left">
                                 <h2>{title ? title : "Not found Page"}</h2>
-                                <h2>AIXOR</h2>
+                                <h2>Bounce Factory Dance Studio</h2>
                             </div>
                             <Link to="/contact" className="theme-btn">
                                 {`Let's Connect`}

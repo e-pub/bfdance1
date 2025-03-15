@@ -24,6 +24,7 @@ const Schedule = () => {
 
   return (
     <div className="sec-schedule">
+      <div className="custom-container">
       <h2 className="tit">SCHEDULE</h2>
       <div id="schedule" className={`schedule-container ${showSchedule ? "opacity-100" : ""}`}>
         {[...Array(5)].map((_, row) =>
@@ -40,17 +41,18 @@ const Schedule = () => {
         )}
       </div>
 
-      {modalOpen && (
-        <div className="modal active">
-          <button className="close-btn" onClick={() => setModalOpen(false)}>✕</button>
-          <iframe
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="YouTube Video"
-          ></iframe>
-        </div>
-      )}
+          {modalOpen && (
+            <div className="modal active">
+              <button className="close-btn" onClick={() => setModalOpen(false)}>✕</button>
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="YouTube Video"
+              ></iframe>
+            </div>
+          )}
+        </div>{/* custom-container */}
     </div>
   );
 };

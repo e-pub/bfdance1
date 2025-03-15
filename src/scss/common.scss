@@ -36,11 +36,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-/* body {width: 100%; height: 100%; padding: 0; margin: 0; 
+body {width: 100%; height: 100%; padding: 0; margin: 0; 
   overflow-x: hidden; overflow-y: auto;
-  line-height: 1;
-}
- */
+  font-size: 15px; line-height: 1}
+
 ol, ul, li {
   list-style: none;
 }
@@ -186,61 +185,109 @@ a:hover {text-decoration: underline}
 .cell-mid {vertical-align: middle}
 .cell-bottom {vertical-align: bottom}
 
-/**************************************** 컬러 ****************************************/
-/**************************************** 컬러 ****************************************/
-:root {
-    --prim: rgb(10,48,112);
-    --prim-l: rgb(68,75,140);
-    --second: #F4C476;
-    --yel: #FFB34E;
-    --green: #26C2BB;
-    --prim-l: #FDEBF2;
-    --second-l: #d7e9fa;
-    --blu-d: #0B3F6E;
-    --blu-f5: #F5F7FA;//테이블 등에 쓰임
-    --bk: #212121;
-    --wh: #fff;
-    --wh-alpha-5: rgba(255,255,255,0.5);
-    --bk-alpha-5: rgba(0,0,0,0.5);
-    --red-alpha-8: rgba(253,235,242,0.8);
-    --red-alpha-9: rgba(253,235,242,0.9);
-    --blu-alpha-9: rgba(229,245,255,0.9);
-    --gray-f8: #f8f8f8;
-    
-    --gray-e: #eee;
-    --gray-d: #ddd;
-    --gray-c: #ccc;
-    --gray-9: #999;
-    --gray-5: #555;
-    --gray-3: #555;
-}//:root
 
 /**************************************** FORMS ****************************************/
 /**************************************** FORMS ****************************************/
-input[type="text"] {width: 100%; height: 40px; line-height: 40px;
-  border: 1px solid var(--gray-d)}
+input.input-reg {width: 100%; height: 40px; line-height: 40px; padding: 0 12px; display: block;
+    background-color: var(--wh); border: 1px solid var(--gray-c); @include radius-50;
+  & + .input-reg {margin-top: 10px}
+}//input.input-reg
 
 /**************************************** WRAP ****************************************/
 /**************************************** WRAP ****************************************/
 [class*="col-"] {display: inline-block}
 
+
+/**************************************** BUTTON/ICON ****************************************/
+/**************************************** BUTTON/ICON ****************************************/
+[class*="btn-"] {@include radius-50;
+  font-weight: bold; color: var(--wh);
+}//[class*="btn-"]
+
 /**************************************** TIT/TXT ****************************************/
 /**************************************** TIT/TXT ****************************************/
 .word {white-space: normal !important}
-.tit_sec {width: 40%;
-  font-size: 35px}
+.tit_sec {font-size: 35px}
 .txt_sec {padding-left: 50px; line-height: 34px;
   font-size: 20px; font-weight: 400; white-space: normal !important;
   &.big {font-size: 26px !important; margin-bottom: 20px}
-}
+}//txt_sec
+.txt-info {text-align: center !important; margin-top: 15px !important;
+  font-size: 15px; color: var(--red); font-weight: bold}
 
 /**************************************** TABLE ****************************************/
 /**************************************** TABLE ****************************************/
 .tb-reg {@include radius-5;
   th, td {font-size: 15px; color: var(--gray-9);
     p {font-size: 20px; color: var(--wh)}
-  }
+  }//th, td
+}//tb-reg
+
+/**************************************** NAV 추가 ****************************************/
+/**************************************** NAV 추가 ****************************************/
+.header-right-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
+/* 🔑 Admin 스위치 버튼 (토글 형태) */
+.admin-switch {
+    width: 50px;
+    height: 24px;
+    background: #ccc;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.admin-switch .switch-thumb {
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+/* 관리자 모드 활성화 */
+.admin-switch.admin-active {
+    background: #4CAF50;
+}
+
+.admin-switch.admin-active .switch-thumb {
+    transform: translateX(26px);
+}
+
+
+/**************************************** MODAL/POPUP/ALERT ****************************************/
+/**************************************** MODAL/POPUP/ALERT ****************************************/
+[class*="modal"] {background-color: var(--gray-e) !important;
+  &.modal-sm {position: fixed; top: 50%; left: 50%; z-index: 1000;
+    width: 80%; min-width: 320px; max-width: 500px; padding: 30px;
+    background-color: var(--wh);    
+    @include radius-10; transform: translate(-50%, -50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)}
+  .tit {text-align: center; margin-bottom: 15px;
+    font-size: 24px; line-height: 24px; color: var(--bk)}
+  [class*="btn"] {background-color: var(--bk);
+    &:hover {background-color: var(--prim)}
+  }//[class*="btn"]
+  .btn-close {border: none; opacity: 1 !important;
+    position: absolute; top: -15px; right: -15px;
+    width: 30px; height: 30px; line-height: 30px; text-align: center;
+    background-color: var(--prim); color: var(--wh); @include radius-cir;
+    transition: background-color 0.3s ease;
+  }//btn-close
+  .btn-confirm {text-align: center; margin-top: 30px;
+    width: 100%; height: 40px; line-height: 40px;
+    background-color: var(--prim);
+    color: var(--wh)}
+}//[class*="modal"]
+
 
 /**************************************** temp ****************************************/
 /**************************************** temp ****************************************/

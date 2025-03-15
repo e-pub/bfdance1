@@ -17,7 +17,7 @@
 
 .schedule-box {
   cursor: pointer;
-  height: 80px;
+  height: 100px;
   text-align: center;
   opacity: 0;
   display: flex;
@@ -34,6 +34,7 @@
   -moz-border-radius: 20px;
   -o-border-radius: 20px;
   font-weight: bold;
+  color: var(--bk);
   transform: translateY(20px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }

@@ -3692,11 +3692,17 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* body {width: 100%; height: 100%; padding: 0; margin: 0; 
-  overflow-x: hidden; overflow-y: auto;
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 15px;
   line-height: 1;
 }
- */
+
 ol, ul, li {
   list-style: none;
 }
@@ -3926,47 +3932,42 @@ a:hover {
   vertical-align: bottom;
 }
 
-/**************************************** 컬러 ****************************************/
-/**************************************** 컬러 ****************************************/
-:root {
-  --prim: rgb(10,48,112);
-  --prim-l: rgb(68,75,140);
-  --second: #F4C476;
-  --yel: #FFB34E;
-  --green: #26C2BB;
-  --prim-l: #FDEBF2;
-  --second-l: #d7e9fa;
-  --blu-d: #0B3F6E;
-  --blu-f5: #F5F7FA;
-  --bk: #212121;
-  --wh: #fff;
-  --wh-alpha-5: rgba(255,255,255,0.5);
-  --bk-alpha-5: rgba(0,0,0,0.5);
-  --red-alpha-8: rgba(253,235,242,0.8);
-  --red-alpha-9: rgba(253,235,242,0.9);
-  --blu-alpha-9: rgba(229,245,255,0.9);
-  --gray-f8: #f8f8f8;
-  --gray-e: #eee;
-  --gray-d: #ddd;
-  --gray-c: #ccc;
-  --gray-9: #999;
-  --gray-5: #555;
-  --gray-3: #555;
-}
-
 /**************************************** FORMS ****************************************/
 /**************************************** FORMS ****************************************/
-input[type=text] {
+input.input-reg {
   width: 100%;
   height: 40px;
   line-height: 40px;
-  border: 1px solid var(--gray-d);
+  padding: 0 12px;
+  display: block;
+  background-color: var(--wh);
+  border: 1px solid var(--gray-c);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+input.input-reg + .input-reg {
+  margin-top: 10px;
 }
 
 /**************************************** WRAP ****************************************/
 /**************************************** WRAP ****************************************/
 [class*=col-] {
   display: inline-block;
+}
+
+/**************************************** BUTTON/ICON ****************************************/
+/**************************************** BUTTON/ICON ****************************************/
+[class*=btn-] {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+  font-weight: bold;
+  color: var(--wh);
 }
 
 /**************************************** TIT/TXT ****************************************/
@@ -3976,7 +3977,6 @@ input[type=text] {
 }
 
 .tit_sec {
-  width: 40%;
   font-size: 35px;
 }
 
@@ -3990,6 +3990,13 @@ input[type=text] {
 .txt_sec.big {
   font-size: 26px !important;
   margin-bottom: 20px;
+}
+
+.txt-info {
+  text-align: center !important;
+  margin-top: 10px !important;
+  color: var(--red);
+  font-weight: bold;
 }
 
 /**************************************** TABLE ****************************************/
@@ -4007,6 +4014,110 @@ input[type=text] {
 }
 .tb-reg th p, .tb-reg td p {
   font-size: 20px;
+  color: var(--wh);
+}
+
+/**************************************** NAV 추가 ****************************************/
+/**************************************** NAV 추가 ****************************************/
+.header-right-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🔑 Admin 스위치 버튼 (토글 형태) */
+.admin-switch {
+  width: 50px;
+  height: 24px;
+  background: #ccc;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-switch .switch-thumb {
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* 관리자 모드 활성화 */
+.admin-switch.admin-active {
+  background: #4CAF50;
+}
+
+.admin-switch.admin-active .switch-thumb {
+  transform: translateX(26px);
+}
+
+/**************************************** MODAL/POPUP/ALERT ****************************************/
+/**************************************** MODAL/POPUP/ALERT ****************************************/
+[class*=modal] {
+  background-color: var(--gray-e) !important;
+}
+[class*=modal].modal-sm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 80%;
+  min-width: 320px;
+  max-width: 500px;
+  padding: 30px;
+  background-color: var(--wh);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+[class*=modal] .tit {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--bk);
+}
+[class*=modal] [class*=btn] {
+  background-color: var(--bk);
+}
+[class*=modal] [class*=btn]:hover {
+  background-color: var(--prim);
+}
+[class*=modal] .btn-close {
+  border: none;
+  opacity: 1 !important;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: var(--prim);
+  color: var(--wh);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+[class*=modal] .btn-confirm {
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: var(--prim);
   color: var(--wh);
 }
 
@@ -4125,7 +4236,7 @@ input[type=text] {
 
 .schedule-box {
   cursor: pointer;
-  height: 80px;
+  height: 100px;
   text-align: center;
   opacity: 0;
   display: flex;
@@ -4142,6 +4253,7 @@ input[type=text] {
   -moz-border-radius: 20px;
   -o-border-radius: 20px;
   font-weight: bold;
+  color: var(--bk);
   transform: translateY(20px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
@@ -4249,7 +4361,7 @@ input[type=text] {
   --prim: rgb(10,48,112);
   --prim-l: rgb(68,75,140);
   --second: #F4C476;
-  --yel: #FFB34E;
+  --red: #ff4e4e;
   --green: #26C2BB;
   --prim-l: #FDEBF2;
   --second-l: #d7e9fa;
