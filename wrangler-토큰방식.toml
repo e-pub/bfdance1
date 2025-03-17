@@ -1,0 +1,22 @@
+name = "bfdance-workers"
+account_id = "370a0e004678a25b387ecbd8ccbde23d"
+workers_dev = true
+compatibility_date = "2025-03-15"
+
+kv_namespaces = [
+  { binding = "RATE_LIMIT_KV", id = "74f3e0ab3dad4d429a3e5a8a7cabd906" }
+]
+
+main = "workers/index.js"
+
+[vars]  # 환경변수 설정
+INSTAGRAM_ACCESS_TOKEN = "새로운_60일_토큰..."
+INSTAGRAM_CLIENT_SECRET = "YOUR_APP_SECRET"
+INSTAGRAM_API_VERSION = "v18.0"
+INSTAGRAM_API_URL = "https://graph.instagram.com/me/media"
+INSTAGRAM_REFRESH_URL = "https://graph.instagram.com/refresh_access_token"
+
+[triggers]
+crons = ["0 0 * * *"]  # ✅ 매일 00:00(UTC)에 실행
+
+
