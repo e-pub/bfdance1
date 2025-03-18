@@ -4351,59 +4351,76 @@ input.input-reg + .input-reg {
 }
 
 /********** CalendarDiary.tsx **********/
+:root {
+  --wh: #ffffff;
+  --bk: #000000;
+}
+
 .calendar-container {
-  width: 100%;
-  max-width: 800px;
+  width: 100%; /* ✅ 캘린더 전체 width 확장 */
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  padding: 20px;
 }
 
 .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  background-color: var(--bk);
+  color: var(--wh);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 5px;
+  background-color: var(--bk);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .day-header {
   font-weight: bold;
-  text-align: center;
+  color: var(--wh);
+  padding: 10px 0;
 }
 
 .day {
-  position: relative;
-  padding: 10px;
-  border: 1px solid #ccc;
-  min-height: 60px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--wh);
+  border-radius: 5px;
+  position: relative;
+}
+
+.day.has-event {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .day-number {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-  color: var(--bk); /* 날짜 색 */
+  color: var(--wh);
 }
 
-.has-event {
-  background: rgba(255, 223, 186, 0.5); /* 인스타 게시물이 있는 날 강조 */
-}
-
-a {
+.event-link {
+  display: block;
   font-size: 12px;
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
+  color: var(--wh);
   text-decoration: underline;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 :root {
