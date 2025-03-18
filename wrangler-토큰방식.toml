@@ -4,7 +4,7 @@ workers_dev = true
 compatibility_date = "2025-03-15"
 
 kv_namespaces = [
-  { binding = "RATE_LIMIT_KV", id = "74f3e0ab3dad4d429a3e5a8a7cabd906" }
+  { binding = "RATE_LIMIT_KV", id = "" }
 ]
 
 main = "workers/index.js"
